@@ -3283,6 +3283,7 @@ details-disclosure > details {
   max-height: 225px;      
 }
 
+/* multirow general positioning for text container */
 .mr_text__text{
   position:absolute;
   z-index:9;
@@ -3294,6 +3295,7 @@ details-disclosure > details {
   height: 225px;
   background-color: white;
 }
+/* multirow header text */
 .mr_text__text h2{
   text-transform: uppercase;
   padding:10px;
@@ -3305,7 +3307,7 @@ details-disclosure > details {
   text-align: center;  
   width:100%;
 }
-
+/* multirow paragraph text */
 .mr_text__text p{
   font-family: Roboto;
   font-weight: 400;
@@ -3320,10 +3322,12 @@ details-disclosure > details {
 .mr_text__text span{
   width:100%;
 }
+/* multirow pipe separator padding  */
 .mr_text__text .pipe{
   padding:15px;
   
 }
+/* style links for the multirow anchor  */
 .mr_text__text a{
   font-family: Roboto;
   font-weight: 400;
@@ -3335,97 +3339,93 @@ details-disclosure > details {
   text-decoration: underline;
   color: #141414
 }
+/* multicolum card css adjustments  */
 .mr_text__text .image-with-text__content{
   padding: 0;
 }
-
-   .mr_text__text a{
-      font-weight:bold;
-  }
-/* multicolum card css adjustments  */
+.mr_text__text a{
+  font-weight:bold;
+}
 .multicolumn-card__image-wrapper{
   width: 72px !important;
 }
+/* multicomluim heading spacing adustment */
 .multicolumn-list h3{
   padding: 0 30%;
 }
 
-  /* header top right nav adjustments  */
-  .header__search{
-    width:175px;
-    margin-right:100px;
-  }
-  /* spaces out the heading nav horizontally  */
-  .header__inline-menu .list-menu li{
-    padding: 0px 14px;
-  }
-  /* hides display of native sightglass   */
-  .header__search details{
-    display:none;
-    position: absolute;
-    right: 315px;
-    top: 35px;
-  }
+/* header top right nav adjustments  */
+.header__search{
+  width:175px;
+  margin-right:100px;
+}
+/* spaces out the heading nav horizontally  */
+.header__inline-menu .list-menu li{
+  padding: 0px 14px;
+}
+/* hides display of native sightglass   */
+.header__search details{
+  display:none;
+  position: absolute;
+  right: 315px;
+  top: 35px;
+}
 
-  /* placeholder input for search in header */
-  #temp_search_input{
-    text-align: left;
-    color: #C4C4C4;
-    height: 35px;
-    width: 193px;
-    border: 1px solid #C4C4C4;
-    border-radius: 18px;
-    padding-right: 40px;
-    padding-left:20px;
-  }
-  /* placeholder sightglass icon over search bar  */
-  .temp_icon-search{
-    height:18px;
-    width: 18px;
-    margin-top: 8px;
-    margin-left: -36px;
-    opacity: .75;
-  }
-  
-  /* my account header section */
-  .header__icon--account{
-    font-size: 14px;
-    display:inline !important;
-    text-align:center;
-    line-height:17px;
-    margin-right:60px;
-    width:120px !important;
-    text-decoration: none;
-    color:#4a4a4a;
-  }
-  /* my account header section underlined anchor */
-  .header__icon--account u{
-    font-size: 12px;
-    text-decoration: underline;
-  }
+/* placeholder input for search in header */
+#temp_search_input{
+  text-align: left;
+  color: #C4C4C4;
+  height: 35px;
+  width: 193px;
+  border: 1px solid #C4C4C4;
+  border-radius: 18px;
+  padding-right: 40px;
+  padding-left:20px;
+}
+/* placeholder sightglass icon over search bar  */
+.temp_icon-search{
+  height:18px;
+  width: 18px;
+  margin-top: 8px;
+  margin-left: -36px;
+  opacity: .75;
+}
 
+/* my account header section */
+.header__icon--account{
+  font-size: 14px;
+  display:inline !important;
+  text-align:center;
+  line-height:17px;
+  margin-right:60px;
+  width:120px !important;
+  text-decoration: none;
+  color:#4a4a4a;
+}
+/* my account header section underlined anchor */
+.header__icon--account u{
+  font-size: 12px;
+  text-decoration: underline;
+}
 
 /* adjustments for mobile assuming 750px breakpoint  */
 @media screen and (max-width: 750px) {
 
-
-.header__icon--account{
-  display:none !important;  
-}
-.header__search{
-  display:none !important;  
-}
+  /* nav item hiding and movement */
+  .header__icon--account{display:none !important;}
+  .header__search{display:none !important;}
   .header__icons{padding-right:30px;}
-.header__icon--menu{padding-left:40px;}
-  
-.media>img{
+  .header__icon--menu{padding-left:40px;}
+
+  /* fix for hero image position on mobile? todo: dynamic via editor? */
+  .media>img{
     object-position: right;
   }
 
+  /* move the white box on the 2nd section for moobile */
   .image-with-text--overlap .image-with-text__media-item{
     margin-top:100px;
   }
-
   .image-with-text--overlap .image-with-text__media img{
     height: 75% !important;
     object-position: top;
@@ -3433,33 +3433,28 @@ details-disclosure > details {
   .image-with-text__text-item{
     top:-50px;
   }
-
   .image-with-text--overlap .image-with-text__content {
     width: 70% !important;
-}
-
-.multirow__inner{
-  display:block !important;
-  height: 1350px;
-}
-
+  }
+  
+  /* multirow goes vertical! */
   .multirow__inner .image-with-text{
     display:block;
     width:100%
   }
-    .multirow__inner .image-with-text:last-child{
+  .multirow__inner{
+    display:block !important;
+    height: 1350px;
+  }
+  /* move the 2nd multirow down on mobile, rather than over */
+  .multirow__inner .image-with-text:last-child{
     display:block;
       top:740px;
   }
+  /* vertical spacing for 2nd muiltrow section */
   .mr_text__text{
     width:100%;
     margin: 0px 0px;
     height: 250px;
-  }
-
- 
-
-
-
-  
+  }  
 }
